@@ -1,0 +1,31 @@
+{
+  "name": "user-crud-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server",
+    "migrate": "npx sequelize-cli db:migrate --config=src/config/db.js",
+    "undu-all": "npx sequelize-cli db:migrate:undo:all",
+    "create-env": "echo NODE_ENV='development' >> .env && echo PORT=3500 >> .env & echo API_BASE_URL='http://localhost:${PORT}/api' >> .env && echo DB_NAME='user-crud-node' >> .env && echo DB_PASSWORD= >> .env"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "dotenv-expand": "^11.0.6",
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "mysql2": "^3.9.4",
+    "node-cron": "^3.0.3",
+    "sequelize": "^6.37.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "sequelize-cli": "^6.6.2"
+  }
+}
